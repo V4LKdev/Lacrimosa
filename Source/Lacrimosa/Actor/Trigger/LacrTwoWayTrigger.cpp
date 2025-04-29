@@ -12,9 +12,6 @@ ALacrTwoWayTrigger::ALacrTwoWayTrigger()
 {
 	PrimaryActorTick.bCanEverTick = false;
 
-	CenterLocation_Pos = FVector(0, 20, 0);
-	CenterLocation_Neg = FVector(0, -20, 0);
-
 	ArrowPositive = CreateDefaultSubobject<UArrowComponent>(TEXT("ArrowPositive"));
 	ArrowPositive->SetupAttachment(RootComponent);
 	ArrowPositive->ArrowColor = FColor::Green;

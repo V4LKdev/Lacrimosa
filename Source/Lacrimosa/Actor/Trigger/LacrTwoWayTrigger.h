@@ -32,16 +32,6 @@ protected:
 	UFUNCTION()
 	void OnComponentEndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
 
-	UPROPERTY(EditAnywhere, Category="Component", BlueprintGetter="GetPositiveCenterLocation", meta=(MakeEditWidget))
-	FVector CenterLocation_Pos;
-	UPROPERTY(EditAnywhere, Category="Component", BlueprintGetter="GetNegativeCenterLocation", meta=(MakeEditWidget))
-	FVector CenterLocation_Neg;
-	
-	UFUNCTION(BlueprintPure)
-	FVector GetPositiveCenterLocation() const { return GetLocationInWorldSpace(CenterLocation_Pos); }
-	UFUNCTION(BlueprintPure)
-	FVector GetNegativeCenterLocation() const { return GetLocationInWorldSpace(CenterLocation_Neg); }
-	
 	UFUNCTION(BlueprintImplementableEvent)
 	void OnPositiveExit();
 	UFUNCTION(BlueprintImplementableEvent)
