@@ -249,7 +249,7 @@ void ALacrCharacterInteraction::FinishDialogue()
 		LockMovementInput(false);
 	}
 
-	if (IsValid(DialogueInstigator))
+	if (IsValid(DialogueInstigator) && DialogueInstigator->Implements<UInteractableInterface>())
 	{
 		IInteractableInterface::Execute_OnDialogueFinished(DialogueInstigator);
 
